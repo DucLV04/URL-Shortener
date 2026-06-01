@@ -2,7 +2,6 @@ import { promises as fs } from 'node:fs'
 import path from 'node:path'
 import { PrismaClient } from '@prisma/client'
 import { PrismaPg } from '@prisma/adapter-pg'
-import crypto from 'node:crypto'
 
 export type ShortUrlRecord = {
   shortCode: string
@@ -77,7 +76,7 @@ export async function createUrl(record: CreateShortUrlInput) {
   if (hasDatabaseUrl()) {
     return getPrismaClient().shortUrl.create({
       data: {
-        id: crypto.randomUUID(),
+        id: record.shortCode,
         shortCode: record.shortCode,
         originalUrl: record.originalUrl,
         createdAt: new Date(record.createdAt),
