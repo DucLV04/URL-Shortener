@@ -14,6 +14,7 @@ type ShortenResponse = {
 }
 
 const apiBaseUrl = import.meta.env.VITE_API_URL ?? 'http://localhost:3001'
+console.log("👉 API URL hiện tại là:", apiBaseUrl);
 const localStorageKey = 'url-shortener:recent-urls'
 
 function App() {
