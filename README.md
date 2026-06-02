@@ -2,7 +2,7 @@
 
 Monorepo for a URL shortener service with a React dashboard and an Express backend.
 
-Live Demo: [👉 Click here to view your Vercel URL](https://url-shortener-gamma-tawny.vercel.app/)
+Live Demo: [👉 Click here for Demo](https://url-shortener-gamma-tawny.vercel.app/)
 
 ## Stack
 
